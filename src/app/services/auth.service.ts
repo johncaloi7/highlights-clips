@@ -72,6 +72,8 @@ export class AuthService {
 
     await this.auth.signOut();
 
+    this.redirect = true;
+
     if (this.redirect) {
       await this.router.navigateByUrl('/');
     }
